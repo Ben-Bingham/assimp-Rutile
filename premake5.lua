@@ -28,8 +28,16 @@
 
 project 'assimp'
 	kind 'StaticLib'
-	warnings 'Off'
-	optimize 'Speed'
+
+	filter "platforms:x64"
+		architecture "x64"
+	filter {}
+
+	filter "configurations:Release"
+		optimize 'Speed'
+	filter "configurations:Debug"
+		symbols "On"
+	filter {}
 
 	cppdialect "C++17"
 	flags "MultiProcessorCompile"
