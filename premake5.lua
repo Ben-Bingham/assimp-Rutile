@@ -40,7 +40,7 @@ project 'assimp'
 	filter {}
 
 	cppdialect "C++17"
-	flags "MultiProcessorCompile"
+    multiprocessorcompile "on"
 
 	targetdir "%{wks.location}/build/3rdParty/bin/%{prj.name}"
 	objdir "%{wks.location}/build/3rdParty/bin-int/%{prj.name}"
